@@ -4,13 +4,14 @@ using TechJobs.Models;
 
 namespace TechJobs.ViewModels
 {
-    public class JobFieldsViewModel
+    public class JobFieldsViewModel : BaseViewModel
     {
         // TODO #7.2 - Extract members common to SearchJobsViewModel
         // to BaseViewModel
 
+        // moved to BaseViewModel
         // The current column
-        public JobFieldType Column { get; set; }
+        // public JobFieldType Column { get; set; }
 
         // All fields in the given column
         public IEnumerable<JobField> Fields { get; set; }
@@ -18,8 +19,9 @@ namespace TechJobs.ViewModels
         // All columns, for display
         public List<JobFieldType> Columns { get; set; }
 
+        // moved to BaseViewModel
         // View title
-        public string Title { get; set; } = "";
+        // public string Title { get; set; } = "";
 
         public JobFieldsViewModel()
         {

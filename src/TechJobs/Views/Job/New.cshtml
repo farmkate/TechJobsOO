@@ -3,18 +3,36 @@
 <div asp-validation-summary="All"></div>
 
 <form asp-controller="Job" asp-action="New" method="post">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input class="form-control" asp-for="Name" />
-    </div>
-    <div class="form-group">
-        <label asp-for="EmployerID"></label>
-        <select asp-for="EmployerID" asp-items="Model.Employers"></select>
-    </div>
+    
+        <div class="form-group">
+                <label asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" />
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="EmployerID"></label>
+            <select asp-for="EmployerID" asp-items="Model.Employers"></select>
+        </div>
 
-    @{ 
-        // TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
-    }
+        @{ 
+            // TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
+        }
+        <div class="form-group">
+            <label asp-for="LocationID"></label>
+            <select asp-for="LocationID" asp-items="Model.Locations"></select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CoreCompetenciesID"></label>
+            <select asp-for="CoreCompetenciesID" asp-items="Model.CoreCompetency"></select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PositionTypesID"></label>
+            <select asp-for="PositionTypesID" asp-items="Model.PositionType"></select>
+        </div>
+  
 
     <input type="submit" value="Add Job" />
+
 </form>
